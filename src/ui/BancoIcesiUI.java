@@ -1,6 +1,7 @@
 package ui;
 
 import java.util.Scanner;
+import BancoIcesiController;
 
 public class BancoIcesiUI {
 
@@ -8,6 +9,9 @@ public class BancoIcesiUI {
      * ATENCION !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      * Agregue los atributos (relaciones) necesarios para conectar esta clase con el modelo.
      */
+
+    private BancoIcesiController cont;
+
 
     private Scanner input;
 
@@ -85,11 +89,31 @@ public class BancoIcesiUI {
      */
 
     public void registrarCliente() {
+    
+        for (int i = 0; i < controller.getClienteList().length; i++) {
+            System.out.println("Por favor ingresa su nombre" + (i + 1));
+            String nombre = sc.nextLine();
 
+            System.out.println("Por favor ingrese su edad" + (i + 1));
+            int edad = sc.nextInt();
+            sc.nextLine();
+
+            System.out.println("Por favor ingrese su cedula" + (i + 1));
+            String cedula= sc.nextInt();
+            sc.nextLine();
+        }
     }
+    
 
     public void asignarCuentaBancariaCliente() {
 
+        for (int i = 0; i < controller.getClienteList().length; i++){
+        System.out.println("Por favor ingresa el Tipo de cuenta bancaria" + (i + 1));
+        String tipo = sc.nextLine().trim().toUpperCase();
+
+        Tipocuenta miTipo = Tipocuenta.valueOf(type);
+        }
+        
     }
 
     public void depositarDineroCuenta() {

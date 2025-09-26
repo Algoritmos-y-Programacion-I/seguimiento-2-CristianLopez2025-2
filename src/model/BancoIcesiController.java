@@ -1,5 +1,8 @@
 package model;
 
+import Cliente.java;
+import Cuenta.java;
+
 public class BancoIcesiController {
 
      /*
@@ -20,6 +23,8 @@ public class BancoIcesiController {
      *      Agregue la logica necesaria (instrucciones) para satisfacer los requerimientos.
      */
     public void agregarCuentaCliente() {
+
+        
 
     }
 
